@@ -24,6 +24,7 @@ class BookControllerMvcTests {
 
     @Test
     void whenGetBookNotExistingThenShouldReturn404() throws Exception {
+        //added for triggering github actions
         String isbn = "73737313940";
         given(bookService.viewBookDetails(isbn)).willThrow(BookNotFoundException.class);
         mockMvc
